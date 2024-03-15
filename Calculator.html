@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--To include the bootstrap in our code-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- linking style from external css-->
+        <link rel="stylesheet" href="styles.css">
+        <!-- linking javascript from external script-->
+        <script src="script.js"></script>
+    </head>
+    <body>
+        
+        <center>
+
+            <form>
+                <h1 style="color:blue;text-align: center;">MINI CALCULATOR</h1>
+                
+                <div style="height:50px;width:300px;background-color:greenyellow">
+                    <p style="border:red;text-align:center">
+                    <h6 style="text-align:left">
+                        <div class="form-check form-switch">
+                            <!--Screen for calculator-->
+                            <input readonly id="t" placeholder=" ---WELCOME---" name="txt" value="OFF MODE" style="width:190px;height:30px"/>
+                            <!-- Toggle button for on and off-->
+                            <input class="form-check-input" type="checkbox" role="switch" onclick="fun()" style="float:right" id="flexSwitchCheckDefault"  />
+                        </div>   
+                    </h6>     
+                    </p>
+                </div>   
+                <div style="height:365px;width:300px;background-color:royalblue">
+                    <!--General mathematic operations buttons-->
+                    <aside style="float:right;width:20%">
+                    
+                        <input type="button" class="b" disabled = true value="+" style="width:50px;height:50px;margin:5px" onclick="perform(this)"/><br/>
+                        <input type="button" class="b" disabled = true value="-" style="width:50px;height:50px;margin:5px;" onclick="perform(this)"/><br/>
+                        <input type="button" class="b" disabled = true value="*" style="width:50px;height:50px;margin:5px;" onclick="perform(this)"/><br/>
+                        <input type="button" class="b" disabled = true value="/" style="width:50px;height:50px;margin:5px;margin-top:5px" onclick="perform(this)"/><br/>
+                        <input type="button" class="b" disabled = true value="%" style="width:50px;height:50px;margin:5px;margin-top:5px" onclick="perform(this)"/>
+                        <input type="button" class="b" disabled = true value="=" style="width:50px;height:50px;margin:5px;" onclick="res(this)"/>
+                        
+                    
+                    </aside>
+                    <!--Numbers and little complex operations buttons-->
+                    <aside style="float:right;width:80%">
+                    
+                    <input type="button" class="b" disabled = true value="9" onclick="press(this)"/>
+                    <input type="button" class="b" disabled = true value="8" onclick="press(this)"/>
+                    <input type="button" class="b" disabled = true value="7" onclick="press(this)"/>
+                    
+                    <input type="button" class="b" disabled = true value="6" onclick="press(this)"/>
+                    <input type="button" class="b" disabled = true value="5" onclick="press(this)"/>
+                    <input type="button" class="b" disabled = true value="4" onclick="press(this)"/>
+                    
+                    <input type="button" class="b" disabled = true value="3" onclick="press(this)"/>
+                    <input type="button" class="b" disabled = true value="2" onclick="press(this)"/>
+                    <input type="button" class="b" disabled = true value="1" onclick="press(this)"/>
+                    
+                    <input type="button" class="b" disabled = true value="." onclick="perform(this)"/>
+                    <input type="button" class="b" disabled = true value="0" onclick="press(this)"/>
+                    <input type="button" class="b" disabled = true value="clr" onclick="txt.value=''"/>
+                    
+                    
+                    <input type="button" class="b" disabled = true value="(" onclick="perform(this)"/>
+                    <input type="button" class="b" disabled = true value="del" onclick="backspc()"/>
+                    <input type="button" class="b" disabled = true value=")" onclick="perform(this)"/>
+                    
+                    
+                    <input type="button" class="b" disabled = true value="x^y" onclick="power()"/>
+                    <input type="button" class="b" disabled = true value="√x" onclick="root()"/>
+                    <input type="button" class="b" disabled = true style="font-size: 16px;  " value="round" onclick="roud()"/>
+                    
+                    
+                    
+                    </aside>
+                    
+                </div>                              
+    
+            </form>
+        </center>
+    </body>
+</html>
